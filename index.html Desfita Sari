@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biodata Desfita Sari</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at top left, #ffffff 0%, transparent 30%),
+                linear-gradient(135deg, #aee3ff, #dff6ff, #b7e7ff);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 30px;
+        }
+
+        /* CARD UTAMA */
+        .card {
+            width: 460px;
+
+            background: rgba(255, 255, 255, 0.78);
+
+            backdrop-filter: blur(18px);
+
+            border: 2px solid rgba(255, 255, 255, 0.9);
+
+            border-radius: 32px;
+
+            padding: 30px;
+
+            box-shadow:
+                0 20px 50px rgba(54, 139, 184, 0.25);
+
+            animation: muncul 0.8s ease;
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* HEADER */
+        .profile {
+            text-align: center;
+
+            margin-bottom: 25px;
+        }
+
+        /* FOTO */
+        .foto-container {
+            position: relative;
+
+            width: 145px;
+            height: 145px;
+
+            margin: auto;
+        }
+
+        .foto {
+            width: 145px;
+            height: 145px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 6px solid white;
+
+            background: #d8f3ff;
+
+            box-shadow:
+                0 10px 25px rgba(55, 145, 195, 0.35);
+        }
+
+        /* TOMBOL TAMBAH FOTO */
+        .tambah-foto {
+            position: absolute;
+
+            right: 0;
+            bottom: 5px;
+
+            width: 42px;
+            height: 42px;
+
+            border-radius: 50%;
+
+            background: #42afe5;
+
+            color: white;
+
+            border: 3px solid white;
+
+            font-size: 25px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .tambah-foto:hover {
+            background: #238fca;
+
+            transform: scale(1.12) rotate(5deg);
+        }
+
+        #inputFoto {
+            display: none;
+        }
+
+        /* NAMA */
+        h1 {
+            margin-top: 18px;
+
+            font-size: 30px;
+
+            color: #24769e;
+        }
+
+        .kelas {
+            margin-top: 6px;
+
+            color: #6d8c9b;
+
+            font-size: 15px;
+        }
+
+        /* DATA BIODATA */
+        .info {
+            display: grid;
+
+            gap: 13px;
+        }
+
+        .item {
+            position: relative;
+
+            background: rgba(255, 255, 255, 0.9);
+
+            padding: 16px 18px;
+
+            border-radius: 18px;
+
+            color: #536d7b;
+
+            line-height: 1.65;
+
+            border-left: 5px solid #7bcdf2;
+
+            transition: all 0.3s ease;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 10px 22px rgba(56, 145, 190, 0.16);
+        }
+
+        .item b {
+            color: #277da6;
+        }
+
+        /* MOTO */
+        .motto {
+            margin-top: 22px;
+
+            padding: 21px;
+
+            border-radius: 22px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #c4edff,
+                    #e8f9ff
+                );
+
+            text-align: center;
+
+            color: #39758c;
+
+            font-style: italic;
+
+            line-height: 1.6;
+
+            box-shadow:
+                inset 0 0 20px rgba(255, 255, 255, 0.7);
+        }
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+
+            margin-top: 20px;
+
+            color: #7d9aa8;
+
+            font-size: 13px;
+        }
+
+        /* HP */
+        @media (max-width: 500px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .card {
+                width: 100%;
+
+                padding: 22px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="card">
+
+        <!-- FOTO DAN IDENTITAS -->
+        <div class="profile">
+
+            <div class="foto-container">
+
+                <!-- Foto awal -->
+                <img
+                    id="fotoProfile"
+                    class="foto"
+                    src="https://via.placeholder.com/145/d9f5ff/27769e?text=FOTO"
+                    alt="Foto Profil Desfita"
+                >
+
+                <!-- Tombol tambah foto -->
+                <label
+                    for="inputFoto"
+                    class="tambah-foto"
+                    title="Tambah foto"
+                >
+                    +
+                </label>
+
+                <!-- Input foto -->
+                <input
+                    type="file"
+                    id="inputFoto"
+                    accept="image/*"
+                >
+
+            </div>
+
+
+            <h1>Desfita Sari</h1>
+
+            <p class="kelas">
+                XI TJKT 3 • No. Absen 5
+            </p>
+
+        </div>
+
+
+        <!-- BIODATA -->
+        <div class="info">
+
+            <div class="item">
+                🏫 <b>Sekolah</b>
+                <br>
+                SMKN 01 Blado
+            </div>
+
+
+            <div class="item">
+
+                🎓 <b>Riwayat Pendidikan</b>
+
+                <br>
+
+                TK (2014–2016)
+
+                <br>
+
+                SD (2016–2022)
+
+                <br>
+
+                SMP (2022–2025)
+
+                <br>
+
+                SMK (2025–sekarang)
+
+            </div>
+
+
+            <div class="item">
+
+                🌷 <b>Kelebihan</b>
+
+                <br>
+
+                Mudah berbaur dengan lingkungan baru
+
+            </div>
+
+
+            <div class="item">
+
+                💅 <b>Hobi</b>
+
+                <br>
+
+                Menghias kuku
+
+            </div>
+
+
+            <div class="item">
+
+                📱 <b>Kegiatan yang dilakukan</b>
+
+                <br>
+
+                Scroll
+
+            </div>
+
+        </div>
+
+
+        <!-- MOTO -->
+        <div class="motto">
+
+            ✨
+
+            "Jadilah diri sendiri dan terus berkembang."
+
+            ✨
+
+        </div>
+
+
+        <div class="footer">
+
+            Made with 💙 by Desfita
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        /*
+         * ==========================================
+         * SISTEM FOTO PROFILE
+         * ==========================================
+         *
+         * Foto disimpan menggunakan localStorage.
+         *
+         * Jadi:
+         * 1. Pilih foto
+         * 2. Foto langsung muncul
+         * 3. Refresh halaman
+         * 4. Foto tetap ada
+         */
+
+
+        const inputFoto =
+            document.getElementById("inputFoto");
+
+        const fotoProfile =
+            document.getElementById("fotoProfile");
+
+
+        /*
+         * CEK FOTO YANG SUDAH TERSIMPAN
+         */
+
+        const fotoTersimpan =
+            localStorage.getItem("fotoDesfita");
+
+
+        if (fotoTersimpan) {
+
+            fotoProfile.src = fotoTersimpan;
+
+        }
+
+
+        /*
+         * SAAT USER MEMILIH FOTO
+         */
+
+        inputFoto.addEventListener(
+            "change",
+            function () {
+
+                const file = this.files[0];
+
+
+                if (!file) {
+                    return;
+                }
+
+
+                /*
+                 * Membaca file foto
+                 */
+
+                const reader =
+                    new FileReader();
+
+
+                reader.onload = function (event) {
+
+                    /*
+                     * Tampilkan foto
+                     */
+
+                    fotoProfile.src =
+                        event.target.result;
+
+
+                    /*
+                     * Simpan foto ke browser
+                     */
+
+                    localStorage.setItem(
+                        "fotoDesfita",
+                        event.target.result
+                    );
+
+                };
+
+
+                reader.readAsDataURL(file);
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>
